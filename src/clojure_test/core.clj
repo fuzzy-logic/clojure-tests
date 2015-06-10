@@ -9,7 +9,8 @@
 (defn problem-1
   "Rotate an array of n elements to the right by k steps."
   [list k]
-  (let [ x (if (> k 0) (- (count list) k) (- k))
+  (let [t (rem k (count list))
+        x (if (> t 0) (- (count list) t) (- t))
         [head tail] (split-at x list)]
     (concat tail head)))
 
