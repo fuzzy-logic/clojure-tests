@@ -54,10 +54,9 @@
   "Given a collection of numbers, return all possible permutations."
   [number]
   (let [n (map read-string (remove empty? (str/split number #"")))]
-    (def x (reduce + (map exp n)))
-    (cond (= x 1) "That right there is a good ol' happy number pardner!!"
-          (= x 4) "That isnt a happy number!"
-          :else
+    (cond (= (reduce + (map exp n)) 1) "That right there is a good ol' happy number pardner!!"
+          (= (reduce + (map exp n)) 4) "That isnt a happy number!"
+          :else "yoyoyo"
     )
   )
 )

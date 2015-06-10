@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e73867cc-6f9b-4d78-87ff-b54ac82b9b28" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/clojure_test/core.clj" afterPath="$PROJECT_DIR$/src/clojure_test/core.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/clojure_test/core_test.clj" afterPath="$PROJECT_DIR$/test/clojure_test/core_test.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="clojure-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clojure_test/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91291726">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.8693759">
+              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -385,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_test/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91291726">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.8693759">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding />
         </state>
       </provider>
