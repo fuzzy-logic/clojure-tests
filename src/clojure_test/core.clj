@@ -3,9 +3,6 @@
   (:require [clojure.string :as str]
             [clojure.math.combinatorics :as combo]))
 
-(defn exp [x]
-  (reduce * (repeat 2 x)))
-
 (defn problem-1
   "Rotate an array of n elements to the right by k steps."
   [list k]
@@ -39,7 +36,7 @@
   "Given a list of non negative integers, arrange them such that they form the
   largest number."
   [numbers]
-)
+  (reduce max (map read-string(map #(apply str %) (combo/permutations numbers)))))
 
 (defn problem-6
   "Given a range [m, n] where 0 <= m <= n <= 2147483647, return the bitwise AND
@@ -53,10 +50,11 @@
   (combo/permutations numbers))
 
 (defn problem-8
-  "Given a collection of numbers, return all possible permutations."
+  "Starting with any positive integer, replace the number by the sum of the
+  squares of its digits, and repeat the process until the number equals 1."
   [number]
   (let [n (map read-string (remove empty? (str/split (str number) #"")))
-        y (reduce + (map exp n))]
+        y (reduce + (map #(reduce * (repeat 2 %)) n))]
     (cond (= y 1) "That right there is a good ol' happy number pardner!!"
           (= y 4) "That isnt a happy number!"
           :else (recur y))))
