@@ -14,7 +14,13 @@
 (defn problem-2
   "Given two strings w1 and w2, determine if they are isomorphic."
   [w1 w2]
-  (vec (seq w1)))
+  (let [fn-v (fn [v] (map #(map first %)
+                   (vals
+                     (group-by #(last %)
+                               (map-indexed vector (seq v))))))
+        word1 (fn-v w1)
+        word2 (fn-v w2)]
+    (= word1 word2)))
 
 (defn problem-3
   "Compare two version numbers v1 and v2.

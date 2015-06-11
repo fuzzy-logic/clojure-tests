@@ -5,12 +5,16 @@
 
 (fact "array was not rotated as expected" (core/problem-1 [1 2 3 4 5 6 7 8 9] 2)
       => [8 9 1 2 3 4 5 6 7])
+(fact "incorrect response" (core/problem-2 "egg" "add")
+      => true)
+(fact "incorrect response" (core/problem-2 "egge" "adds")
+      => false)
+(fact "version numbers were incorrectly ordered" (core/problem-3 "1.3.2" "1.3.2.1")
+      => -1)
 (fact "text was incorrectly reversed" (core/problem-4 "This is some test data")
       => "data test some is This")
 (fact "the highest number was not found" (core/problem-5 [30 3 370 93 31])
       => 9337033130)
-(fact "version numbers were incorrectly ordered" (core/problem-3 "1.3.2" "1.3.2.1")
-      => -1)
 (fact "permutations of vector were incorrectly output" (core/problem-7 [0 1 2])
       => '([0 1 2] [0 2 1] [1 0 2] [1 2 0] [2 0 1] [2 1 0]))
 (fact "permutations of vector were incorrectly output" (core/problem-8 19)
@@ -38,8 +42,6 @@
       => 0)
 (fact "compare 1.2.5.4 & 1.2.4.4 = -1" (core/problem-3 "1.2.5.4" "1.2.4.4")
       => 1)
-
-
-
 (fact "permutations of vector were incorrectly output" (core/problem-7 [0 1 2])
       => '([0 1 2] [0 2 1] [1 0 2] [1 2 0] [2 0 1] [2 1 0]))
+
