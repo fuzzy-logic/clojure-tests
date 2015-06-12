@@ -15,6 +15,12 @@
       => "data test some is This")
 (fact "the highest number was not found" (core/problem-5 [30 3 370 93 31])
       => 9337033130)
+(fact "incorrect response" (core/problem-6 5 7)
+      => 4)
+(fact "incorrect response" (core/problem-6 27 31)
+      => 24)
+(fact "incorrect response" (core/problem-6 27 32)
+      => 0)
 (fact "permutations of vector were incorrectly output" (core/problem-7 [0 1 2])
       => '([0 1 2] [0 2 1] [1 0 2] [1 2 0] [2 0 1] [2 1 0]))
 (fact "permutations of vector were incorrectly output" (core/problem-8 19)
@@ -44,4 +50,3 @@
       => 1)
 (fact "permutations of vector were incorrectly output" (core/problem-7 [0 1 2])
       => '([0 1 2] [0 2 1] [1 0 2] [1 2 0] [2 0 1] [2 1 0]))
-

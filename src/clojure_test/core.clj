@@ -47,8 +47,14 @@
 (defn problem-6
   "Given a range [m, n] where 0 <= m <= n <= 2147483647, return the bitwise AND
   of all numbers in this range, inclusive."
-  [numbers]
-)
+  [m n]
+  (let [nums (range m (+ n 1))
+        n (apply max (map count (map #(Integer/toBinaryString %) nums)))
+        bin (map #(take-last n(concat (repeat 30 \0)(Integer/toBinaryString %))) nums)
+        bool (map #(map (fn [v] (= \1 v)) %) bin)
+        ]
+    (Integer/parseInt
+      (apply str (map #(if % 1 0) (apply map (fn [& args] (if (some false? args) false true)) bool)))2)))
 
 (defn problem-7
   "Given a collection of numbers, return all possible permutations."
